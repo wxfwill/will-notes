@@ -1,26 +1,25 @@
-# 前言
+# 开始使用
 
-## 参考和版权
+## 安装 vuepresss
 
-整理中...
-# 安装
-
-## 安装vuepresss
-
-``` sh
-$ npm install -g vuepress
+```sh
+ npm install -g vuepress
 ```
 
 ## 开发
 
-``` sh
-$ npm run docs:dev
+```sh
+ npm run dev or yarn dev
 ```
 
 ## 打包
 
-``` sh
-$ npm run docs:build
+```sh
+ npm run build or yarn build
 ```
 
-  
+## 部署
+
+```sh
+npm run depoly or yarn depoly
+```
