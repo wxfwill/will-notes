@@ -1,0 +1,19 @@
+{
+  "name": "will-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "npm run clean && vuepress build docs",
+    "depoly": "depoly.sh",
+    "clean": "rimraf docs/.vuepress/dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.9.5",
+    "vuepress-plugin-export": "^0.2.0"
+  }
+}
