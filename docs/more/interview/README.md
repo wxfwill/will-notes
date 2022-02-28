@@ -6,13 +6,13 @@ sidebar: auto
 
 <!-- ## 基础部分 -->
 
-### 原始类型
+## 原始类型
 
 ::: tip
 js 中有六种原始类型，原始类型保存值, 引用类型保存对象的指针。
 :::
 
-### 六种原始类型
+## 六种原始类型
 
 - string
 - number
@@ -21,11 +21,11 @@ js 中有六种原始类型，原始类型保存值, 引用类型保存对象的
 - undefined
 - symbol
 
-### null 到底是什么类型
+## null 到底是什么类型
 
 书中解释`null`属于空对象, 是一个对象类型。在早期的`js`版本中使用的是 32 位系统，考虑性能问题，使用低位存储变量的类型信息，`000`开头代表对象，而`null`代表全零，所以将它错误的判断成`object`，虽然后期内部代码已经改变，但`null`类型为`object`的判断却保留了下来，属于历史遗留问题，是`bug`也好，说它是空对象，是对象类型也能理解的通。
 
-### 对象类型
+## 对象类型
 
 ::: tip
 js 中除了原始类型，其他的都属于对象类型，对象类型存储的是地址，而原始类型存储的是值。
@@ -238,13 +238,13 @@ if (a == 1 && a == 2 && a == 3) {
 
 ```js
 var name = "global name";
-var foo = function() {
+var foo = function () {
   console.log(this.name);
 };
-var Person = function(name) {
+var Person = function (name) {
   this.name = name;
 };
-Person.prototype.getName = function() {
+Person.prototype.getName = function () {
   console.log(this.name);
 };
 var obj = {
@@ -304,7 +304,7 @@ var a = 1;
 function foo() {
   var a = 2;
   // 这就是闭包
-  return function() {
+  return function () {
     console.log(a);
   };
 }
@@ -380,7 +380,7 @@ for (var i = 1; i <= 5; i++) {
 
 ```js
 for (var i = 1; i <= 5; i++) {
-  (function(j) {
+  (function (j) {
     setTimeout(function timer() {
       console.log(j);
     }, i * 1000);
@@ -477,7 +477,7 @@ var obj = {
   name: "张三",
   age: 23,
   address: undefined,
-  sayHello: function() {
+  sayHello: function () {
     console.log("hello");
   },
   isStudent: false,
@@ -596,7 +596,7 @@ function Animal(name) {
   this.name = name;
   this.colors = ["red", "blue"];
 }
-Animal.prototype.eat = function() {
+Animal.prototype.eat = function () {
   console.log(this.name + " is eating!");
 };
 function Dog(name) {
@@ -627,7 +627,7 @@ function Animal(name) {
   this.name = name;
   this.colors = ["red", "blue"];
 }
-Animal.prototype.eat = function() {
+Animal.prototype.eat = function () {
   console.log(this.name + " is eatting");
 };
 function Dog(name) {
@@ -653,7 +653,7 @@ function Animal(name) {
   this.name = name;
   this.colors = ["red", "blue"];
 }
-Animal.prototype.eat = function() {
+Animal.prototype.eat = function () {
   console.log(this.name + " is eatting");
 };
 function Dog(name) {

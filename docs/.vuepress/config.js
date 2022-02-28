@@ -59,7 +59,13 @@ module.exports = {
         {
           title: "基础",
           collapsable: false, // false 意味着展开  true 关闭展开
-          children: ["/javascript/core/prototype.md", "/javascript/core/event-loop.md", "/javascript/core/type-change.md"],
+          children: [
+            "/javascript/core/js-1prototype.md",
+            "/javascript/core/js-2作用域.md",
+            "/javascript/core/js-3执行上下文.md",
+            "/javascript/core/event-loop.md",
+            "/javascript/core/type-change.md",
+          ],
         },
         {
           title: "深入",
@@ -71,6 +77,31 @@ module.exports = {
             "/javascript/core/js-工具方法.md",
             "/javascript/core/js-server.md",
           ],
+        },
+      ],
+      "/frame/react/": [
+        {
+          title: "基础",
+          collapsable: false, // false 意味着展开  true 关闭展开
+          children: [
+            "/frame/react/base/jsx.md",
+            "/frame/react/base/react组件.md",
+            "/frame/react/base/state.md",
+            "/frame/react/base/props.md",
+            "/frame/react/base/lifeCycle.md",
+            "/frame/react/base/ref.md",
+            "/frame/react/base/context.md",
+          ],
+        },
+        {
+          title: "优化",
+          collapsable: false,
+          children: ["/frame/react/optimize/渲染控制.md", "/frame/react/optimize/渲染调优.md", "/frame/react/optimize/bigData.md"],
+        },
+        {
+          title: "原理",
+          collapsable: false,
+          children: ["/frame/react/tenet/event.md"],
         },
       ],
       // "/": "/javascript/core/prototype.md",
