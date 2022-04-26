@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>react 渲染控制 | will笔记</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="/will-notes/logo.png">
+    <meta name="description" content="记录工作中的常见知识点">
+    
+    <link rel="preload" href="/will-notes/assets/css/0.styles.0e940edd.css" as="style"><link rel="preload" href="/will-notes/assets/js/app.c8ea543d.js" as="script"><link rel="preload" href="/will-notes/assets/js/2.8ca3b45e.js" as="script"><link rel="preload" href="/will-notes/assets/js/22.a1aa4eb1.js" as="script"><link rel="prefetch" href="/will-notes/assets/js/10.4d0b4cc1.js"><link rel="prefetch" href="/will-notes/assets/js/11.24747499.js"><link rel="prefetch" href="/will-notes/assets/js/12.de62a669.js"><link rel="prefetch" href="/will-notes/assets/js/13.ede023fc.js"><link rel="prefetch" href="/will-notes/assets/js/14.286bb9c5.js"><link rel="prefetch" href="/will-notes/assets/js/15.0b623dfd.js"><link rel="prefetch" href="/will-notes/assets/js/16.90816daa.js"><link rel="prefetch" href="/will-notes/assets/js/17.84990156.js"><link rel="prefetch" href="/will-notes/assets/js/18.4ce8fae2.js"><link rel="prefetch" href="/will-notes/assets/js/19.08aa54f0.js"><link rel="prefetch" href="/will-notes/assets/js/20.c5d8f9b3.js"><link rel="prefetch" href="/will-notes/assets/js/21.d5275deb.js"><link rel="prefetch" href="/will-notes/assets/js/23.1214cb7a.js"><link rel="prefetch" href="/will-notes/assets/js/24.8fef5240.js"><link rel="prefetch" href="/will-notes/assets/js/25.fed8d16f.js"><link rel="prefetch" href="/will-notes/assets/js/26.0ce506f0.js"><link rel="prefetch" href="/will-notes/assets/js/27.e6b8de27.js"><link rel="prefetch" href="/will-notes/assets/js/28.3cf8502d.js"><link rel="prefetch" href="/will-notes/assets/js/29.904cadb0.js"><link rel="prefetch" href="/will-notes/assets/js/3.1ac5bbee.js"><link rel="prefetch" href="/will-notes/assets/js/30.d6cc1635.js"><link rel="prefetch" href="/will-notes/assets/js/31.346d6b6a.js"><link rel="prefetch" href="/will-notes/assets/js/32.3a45bffd.js"><link rel="prefetch" href="/will-notes/assets/js/33.b42fd141.js"><link rel="prefetch" href="/will-notes/assets/js/34.5cda6fc9.js"><link rel="prefetch" href="/will-notes/assets/js/35.81cae9e4.js"><link rel="prefetch" href="/will-notes/assets/js/36.acb8b829.js"><link rel="prefetch" href="/will-notes/assets/js/37.aae14732.js"><link rel="prefetch" href="/will-notes/assets/js/38.fd982297.js"><link rel="prefetch" href="/will-notes/assets/js/39.407a5026.js"><link rel="prefetch" href="/will-notes/assets/js/4.45eb02b9.js"><link rel="prefetch" href="/will-notes/assets/js/40.6079b917.js"><link rel="prefetch" href="/will-notes/assets/js/41.c96fe388.js"><link rel="prefetch" href="/will-notes/assets/js/42.3062239c.js"><link rel="prefetch" href="/will-notes/assets/js/43.19083791.js"><link rel="prefetch" href="/will-notes/assets/js/44.814386ea.js"><link rel="prefetch" href="/will-notes/assets/js/45.61ae8f52.js"><link rel="prefetch" href="/will-notes/assets/js/46.c00a3d00.js"><link rel="prefetch" href="/will-notes/assets/js/47.148f4d88.js"><link rel="prefetch" href="/will-notes/assets/js/48.af62f24b.js"><link rel="prefetch" href="/will-notes/assets/js/49.d482f1b8.js"><link rel="prefetch" href="/will-notes/assets/js/5.b5610992.js"><link rel="prefetch" href="/will-notes/assets/js/50.350e4e29.js"><link rel="prefetch" href="/will-notes/assets/js/51.ea73ed03.js"><link rel="prefetch" href="/will-notes/assets/js/52.f69931be.js"><link rel="prefetch" href="/will-notes/assets/js/53.5d5439f8.js"><link rel="prefetch" href="/will-notes/assets/js/6.e5a430cb.js"><link rel="prefetch" href="/will-notes/assets/js/7.7d9f80e0.js"><link rel="prefetch" href="/will-notes/assets/js/8.d8fda459.js"><link rel="prefetch" href="/will-notes/assets/js/9.ae860d57.js">
+    <link rel="stylesheet" href="/will-notes/assets/css/0.styles.0e940edd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/will-notes/" class="home-link router-link-active"><!----> <span class="site-name">will笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/will-notes/javascript/" class="nav-link">
+  javascript
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="常用框架" class="dropdown-title"><span class="title">常用框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="常用框架" class="mobile-dropdown-title"><span class="title">常用框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/will-notes/frame/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/will-notes/frame/react/" class="nav-link router-link-active">
+  React
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多知识" class="dropdown-title"><span class="title">更多知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="更多知识" class="mobile-dropdown-title"><span class="title">更多知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/will-notes/more/typescript/" class="nav-link">
+  typeScript
+</a></li><li class="dropdown-item"><!----> <a href="/will-notes/more/interview/" class="nav-link">
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/will-notes/more/vscode/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/will-notes/more/share/" class="nav-link">
+  精品分享
+</a></li><li class="dropdown-item"><!----> <a href="/will-notes/more/tools/" class="nav-link">
+  轮子库
+</a></li><li class="dropdown-item"><!----> <a href="/will-notes/more/website/" class="nav-link">
+  网址收藏
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/will-notes/javascript/" class="nav-link">
+  javascript
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="常用框架" class="dropdown-title"><span class="title">常用框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="常用框架" class="mobile-dropdown-title"><span class="title">常用框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/will-notes/frame/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/will-notes/frame/react/" class="nav-link router-link-active">
+  React
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多知识" class="dropdown-title"><span class="title">更多知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="更多知识" class="mobile-dropdown-title"><span class="title">更多知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/will-notes/more/typescript/" class="nav-link">
+  typeScript
+</a></li><li class="dropdown-item"><!----> <a href="/will-notes/more/interview/" class="nav-link">
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/will-notes/more/vscode/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/will-notes/more/share/" class="nav-link">
+  精品分享
+</a></li><li class="dropdown-item"><!----> <a href="/will-notes/more/tools/" class="nav-link">
+  轮子库
+</a></li><li class="dropdown-item"><!----> <a href="/will-notes/more/website/" class="nav-link">
+  网址收藏
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/will-notes/frame/react/base/jsx.html" class="sidebar-link">jsx 是什么</a></li><li><a href="/will-notes/frame/react/base/react组件.html" class="sidebar-link">react 组件</a></li><li><a href="/will-notes/frame/react/base/state.html" class="sidebar-link">state</a></li><li><a href="/will-notes/frame/react/base/props.html" class="sidebar-link">理解 props</a></li><li><a href="/will-notes/frame/react/base/lifeCycle.html" class="sidebar-link">react 生命周期</a></li><li><a href="/will-notes/frame/react/base/ref.html" class="sidebar-link">ref</a></li><li><a href="/will-notes/frame/react/base/context.html" class="sidebar-link">react context</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>优化</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/will-notes/frame/react/optimize/渲染控制.html" class="active sidebar-link">react 渲染控制</a></li><li><a href="/will-notes/frame/react/optimize/渲染调优.html" class="sidebar-link">react 渲染调优</a></li><li><a href="/will-notes/frame/react/optimize/bigData.html" class="sidebar-link">react 处理海量数据</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>原理</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/will-notes/frame/react/tenet/event.html" class="sidebar-link">react 事件系统</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="react-渲染控制"><a href="#react-渲染控制" class="header-anchor">#</a> react 渲染控制</h1></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">2/28/2022, 6:10:04 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/will-notes/frame/react/base/context.html" class="prev">
+        react context
+      </a></span> <span class="next"><a href="/will-notes/frame/react/optimize/渲染调优.html">
+        react 渲染调优
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/will-notes/assets/js/app.c8ea543d.js" defer></script><script src="/will-notes/assets/js/2.8ca3b45e.js" defer></script><script src="/will-notes/assets/js/22.a1aa4eb1.js" defer></script>
+  </body>
+</html>
